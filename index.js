@@ -43,9 +43,7 @@ app.enable("trust proxy", 1);
 app.use(
     cors({
         origin: [
-            "https://eshop-user.netlify.app",
-            "https://hong-eshop-admin.netlify.app",
-            "https://eshop-be.vercel.app",
+            "https://ecommerce-be-website.onrender.com",
             "http://localhost:3000",
             "http://localhost:3001",
         ],
