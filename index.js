@@ -26,10 +26,10 @@ const sessionStore = new mongoDBStore({
 
 app.use(
     session({
-        // secret: "secret cookie",
+        secret: "secret cookie",
         resave: false,
         saveUninitialized: false,
-        // store: sessionStore,
+        store: sessionStore,
         cookie: {
             maxAge: 1000 * 60 * 60,
             sameSite: "lax",
