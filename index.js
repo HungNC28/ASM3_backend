@@ -38,7 +38,7 @@ app.use(
     })
 );
 
-app.enable("trust proxy", 1);
+// app.enable("trust proxy", 1);
 
 app.use(
     cors({
@@ -52,6 +52,8 @@ app.use(
         credentials: true,
     })
 );
+app.use(express.static("public"));
+// app.use(cors());
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));

@@ -2,7 +2,7 @@ exports.requiresLogin = (req, res, next) => {
     const reqCookie = req.headers.cookie;
     console.log("reqCookie111111111111", reqCookie);
     const userId = reqCookie.split(";")[1].split("=")[1];
-
+    console.log("2222", userId);
     const token = reqCookie.split(";")[0].split("=")[1];
 
     if (req.session && userId && token) {
