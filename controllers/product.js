@@ -1,11 +1,8 @@
 const Product = require("../models/Product");
 
 exports.getAllProduct = async (req, res, next) => {
-    console.log("all");
     try {
-        console.log("all 111111111");
         const products = await Product.find();
-        console.log("all 22222222222");
         res.status(200).send(products);
     } catch (error) {
         return next(new Error(error));

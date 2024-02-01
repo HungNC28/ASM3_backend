@@ -42,11 +42,12 @@ app.enable("trust proxy", 1);
 
 app.use(
     cors({
-        origin: [
-            "https://ecommerce-be-website.onrender.com",
-            "http://localhost:3000",
-            "http://localhost:3001",
-        ],
+        origin: "*",
+        // [
+        //     "https://ecommerce-be-website.onrender.com",
+        //     "http://localhost:3000",
+        //     "http://localhost:3001",
+        // ],
         methods: ["GET,POST,PUT,PATH,DELETE,OPTIONS"],
         credentials: true,
     })
