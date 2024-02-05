@@ -44,7 +44,7 @@ app.use(
     cors({
         origin: [
             "https://ecommerce-be-website.onrender.com",
-            "http://localhost:3000",
+            "https://ecommerce-shop-client.onrender.com",
             "http://localhost:3001",
         ],
         methods: ["GET,POST,PUT,PATH,DELETE,OPTIONS"],
