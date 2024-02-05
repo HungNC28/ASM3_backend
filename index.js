@@ -32,7 +32,7 @@ app.use(
         store: sessionStore,
         cookie: {
             maxAge: 1000 * 60 * 60,
-            sameSite: "strict",
+            sameSite: "none",
             secure: true,
         },
     })
