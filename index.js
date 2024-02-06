@@ -31,11 +31,9 @@ app.use(
         saveUninitialized: false,
         store: sessionStore,
         cookie: {
-            maxAge: 60 * 60 * 3 * 100,
-            path: "/",
-            httpOnly: false,
-            sameSite: "none",
-            secure: true,
+            maxAge: 1000 * 60 * 60,
+            sameSite: "lax",
+            secure: false,
         },
     })
 );
@@ -54,7 +52,6 @@ app.use(
     })
 );
 app.use(express.static("public"));
-// app.use(cors());
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
