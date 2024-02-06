@@ -31,15 +31,19 @@ app.use(
         saveUninitialized: false,
         store: sessionStore,
         cookie: {
-            maxAge: 1000 * 60 * 60,
-            sameSite: "lax",
-            secure: false,
+            httpOnly: true,
+            path: "/",
+            maxAge: 1000 * 60 * 60 * 24 * 7,
+            expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
+            domain: "https://ecommerce-shop-client.onrender.com",
+            sameSite: "none",
+            secure: true,
         },
     })
 );
 
-// app.enable("trust proxy", 1);
-
+app.set("trust proxy");
+app.enable("trust proxy");
 app.use(
     cors({
         origin: [
@@ -49,6 +53,7 @@ app.use(
         ],
         methods: ["GET,POST,PUT,PATH,DELETE,OPTIONS"],
         credentials: true,
+        exposedHeaders: ["Set-Cookie"],
     })
 );
 app.use(express.static("public"));
