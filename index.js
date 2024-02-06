@@ -35,7 +35,7 @@ app.use(
             path: "/",
             maxAge: 1000 * 60 * 60 * 24 * 7,
             expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
-            domain: "https://ecommerce-shop-client.onrender.com",
+            // domain: "https://ecommerce-shop-client.onrender.com",
             sameSite: "none",
             secure: true,
         },
